@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="ad.css">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body style="background-color: #E8E8E8">
+    
+    <nav class="navbar">
+        <!-- <img class="logo" src="logo3.PNG"> -->
+        <form>
+            <div class="newAd">
+                <button onclick="" class="newAdButton" class="open-popup">new advertisement</button>
+            </div>
+        </form>
+        
+            <div class="search">
+                <div class="icon"></div>
+                <div class="input">
+                    <input type= "text" placeholder="Search" id="mysearch">
+                </div>
+                <span class="clear" onclick="document.getElementById('mysearch').value='' " ></span>
+            </div>
+    </nav>
+
+   
+<nav class="ad-categories">
+
+    <div class="job-icon" id="job-id">
+    <img class="job" src="briefcase.png">
+        <p class="job-text">Job</p>
+    </div>
+    <div class="house-icon">
+        <img class="house" src="houseIcon.png">
+        <p class="job-text">Real Estate</p>
+    </div>
+    <div class="clothes-icon">
+        <img class="clothes" src="clothesbw.png">
+        <p class="job-text">Clothes</p>
+    </div>
+    <div class="car-icon">
+        <img class="car" src="4-512_7214.png">
+        <p class="job-text">Cars</p>
+    </div>
+    <div class="animals-icon">
+        <img class="animals" src="22723.png">
+        <p class="job-text">Pets</p>
+    </div>
+</nav>
+
+
+
+
+    <div class="popup-bg">
+        <div class="popup" id="popupInfo">
+            <img class="close-popup" src="close.png" alt="icon">
+            <form action="">
+                <input list="categories" name="category" id="category" placeholder="Choose category">
+                    <datalist id="categories">
+                    <option value="Job">
+                    <option value="Real estate">
+                    <option value="Clothes">
+                    <option value="Cars">
+                    <option value="Animals">
+                    </datalist>
+                <input type="text" name="popup-form" placeholder="Type your advertisement">
+               <button onclick="fn()" id="submitButton">Publish</button>
+
+            </form>
+
+            
+            
+
+
+        </div>
+    </div>
+
+
+    <script>
+        const icon = document.querySelector('.icon');
+        const search = document.querySelector('.search');
+        icon.onclick = function(){
+            search.classList.toggle('active')
+        }
+    $('.newAdButton').click(function(e) {
+    e.preventDefault();
+    $('.popup-bg').fadeIn(800);
+    });
+
+    $('.close-popup').click(function() {
+    $('.popup-bg').fadeOut(800);
+    });
+
+   
+
+        
+    
+
+    </script>
+</body>
+</html>
